@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/react.js"></script>
+    <script src="../js/react-dom.js"></script>
+    <script src="../js/browser.min.js"></script>
+</head>
+<body>
+<div id="example"></div>
+<script type="text/babel">
+    /*React 允许将代码封装成组件（component），然后像插入普通 HTML 标签一样，在网页中插入这个组件。React.createClass 方法就用于生成一个组件类
+    组件的属性可以在组件类的 this.props 对象上获取，比如 name 属性就可以通过 this.props.name*/
+var HelloMessage=React.createClass({
+    render:function () {
+        return <h1>hello{this.props.name}</h1>
+    }
+})
+    ReactDOM.render(<HelloMessage name="Lee"></HelloMessage>,document.getElementById("example"))
+</script>
+</body>
+</html>
